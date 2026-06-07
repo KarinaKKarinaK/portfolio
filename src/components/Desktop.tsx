@@ -34,14 +34,6 @@ const desktopIcons = [
     top: "44%",
     window: "projects" as const,
   },
-  {
-    id: "math",
-    imageSrc: "/icons/math-tree.png",
-    label: "VU Amsterdam",
-    left: "72%",
-    top: "40%",
-    window: "about" as const,
-  },
 ];
 
 export function Desktop() {
@@ -72,7 +64,7 @@ export function Desktop() {
         />
       ))}
 
-      <Dock />
+      <Dock onOpenProjects={openProjects} onOpenAbout={openAbout} />
 
       {openWindow === "projects" && <ProjectsWindow onClose={closeWindow} />}
       {openWindow === "about" && <AboutWindow onClose={closeWindow} />}

@@ -16,10 +16,14 @@
   z-index: 3;
 }
 
-.itemWrap {
+.itemBtn {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
   text-decoration: none;
 }
 

@@ -12,7 +12,7 @@ export function ProjectsWindow({ onClose }: Props) {
   const project = projects.find((p) => p.id === selected);
 
   return (
-    <Window title="Projects" onClose={onClose} initialX={80} initialY={60} width={620} height={420}>
+    <Window title="Projects" onClose={onClose} initialX={80} initialY={60} width={660} height={460}>
       <div className={styles.container}>
         <div className={styles.sidebar}>
           {projects.map((p) => (
@@ -29,6 +29,11 @@ export function ProjectsWindow({ onClose }: Props) {
         <div className={styles.detail}>
           {project ? (
             <>
+              {project.image && (
+                <div className={styles.imageWrap}>
+                  <img src={project.image} alt={project.name} className={styles.image} />
+                </div>
+              )}
               <div className={styles.detailYear}>{project.year}</div>
               <div className={styles.detailName}>{project.name}</div>
               <div className={styles.detailMeta}>{project.role} &middot; {project.venue}</div>
