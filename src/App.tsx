@@ -9,7 +9,6 @@ export default function App() {
         <div className={styles.bgBlob2} />
         <div className={styles.bgBlob3} />
       </div>
-      <div className={styles.name}>Karina Mac</div>
       <div className={styles.screen}>
         <Desktop />
       </div>
