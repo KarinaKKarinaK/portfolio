@@ -3,42 +3,48 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 36px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  height: 28px;
+  background: rgba(20, 80, 170, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px;
+  padding: 0 14px;
   z-index: 5;
 }
 
 .brand {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
-  color: white;
-  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: 0.01em;
 }
 
 .nav {
   display: flex;
-  gap: 20px;
+  gap: 18px;
+  align-items: center;
 }
 
 .navLink {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.9);
-  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.02em;
   cursor: pointer;
-  padding: 4px 0;
-  transition: color 0.15s;
+  padding: 0;
   background: none;
   border: none;
   font-family: inherit;
+  transition: color 0.12s;
 }
 
 .navLink:hover {
   color: white;
+}
+
+/* "Projects" has underline like the reference */
+.navLink:first-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  padding-bottom: 1px;
 }
