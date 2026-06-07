@@ -1,0 +1,74 @@
+.window {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border-radius: 12px;
+  box-shadow:
+    0 22px 70px rgba(0, 0, 0, 0.35),
+    0 0 0 0.5px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleBar {
+  height: 32px;
+  background: rgba(232, 232, 235, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  cursor: grab;
+  user-select: none;
+  flex-shrink: 0;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.titleBar:active {
+  cursor: grabbing;
+}
+
+.trafficLights {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.light {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: filter 0.1s;
+}
+
+.light:hover {
+  filter: brightness(0.85);
+}
+
+.red   { background: #ff5f57; box-shadow: 0 0 0 0.5px rgba(0,0,0,0.15); }
+.yellow { background: #ffbd2e; box-shadow: 0 0 0 0.5px rgba(0,0,0,0.15); }
+.green  { background: #28c840; box-shadow: 0 0 0 0.5px rgba(0,0,0,0.15); }
+
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  font-weight: 500;
+  color: #1d1d1f;
+  letter-spacing: -0.01em;
+}
+
+.body {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  background: rgba(255, 255, 255, 0.55);
+}
